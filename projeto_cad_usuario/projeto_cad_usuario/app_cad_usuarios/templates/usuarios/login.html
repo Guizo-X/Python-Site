@@ -1,0 +1,12 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <div style="text-align: center;" class="container">
+        <h1>Login de Usuário</h1>
+        email <input name="email" class="form-control-sm" type="text"><br>
+        senha <input name="senha" class="form-control-sm" type="password"><br> <!-- Use type="password" for password input -->
+        <button class="form-control-sm"> Entrar </button>
+    </div>
+</form>
+{% endblock %}
